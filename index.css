@@ -1,0 +1,122 @@
+@font-face {
+  font-family: Outfit;
+  src: url(assets/fonts/outfit/Outfit-VariableFont_wght.ttf);
+}
+
+@font-face {
+  font-family: YoungFont;
+  src: url(assets/fonts/outfit/Outfit-VariableFont_wght.ttf);
+}
+
+:root {
+  --white: hsl(0, 0%, 100%);
+  --stone100: hsl(30, 54%, 90%);
+  --stone150: hsl(30, 18%, 87%);
+  --stone600: hsl(30, 10%, 34%);
+  --stone900: hsl(24, 5%, 18%);
+  --brown800: hsl(14, 45%, 36%);
+  --rose800: hsl(332, 51%, 32%);
+  --rose50: hsl(330, 100%, 98%);
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: Outfit;
+}
+
+@media only screen and (min-width: 375px) {
+  main {
+    padding: 2rem;
+  }
+}
+
+h2,
+table tr td:last-child {
+  color: var(--brown800);
+}
+
+h3 {
+  color: var(--rose800);
+}
+
+table tr td:last-child {
+  font-weight: 700;
+}
+
+.recipe-image {
+  background-image: url(assets/images/image-omelette.jpeg);
+  max-width: 100%;
+}
+
+@media only screen and (min-width: 375px) {
+  .recipe-image {
+    @media only screen and (min-width: 375px) {
+      border-radius: 1rem;
+    }
+  }
+}
+
+.recipe-detail {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.preparation {
+  background-color: var(--rose50);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  border-radius: 0.5rem;
+}
+
+.ingredients,
+.instructions,
+.nutrition {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+ul {
+  list-style-position: inside;
+}
+
+ol li:not(:last-child) {
+  margin-top: 0.5rem;
+}
+
+ul li::marker,
+ol li::marker {
+  color: var(--rose800);
+}
+
+.instructions--list {
+  padding-left: 1rem;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+tr:not(:last-child) {
+  border-bottom: solid black 1px;
+  padding-bottom: 1rem;
+}
+
+td {
+  text-align: left;
+  padding: 0.5rem 1.5rem;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
